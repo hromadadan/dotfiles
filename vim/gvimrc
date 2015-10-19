@@ -1,7 +1,8 @@
 " .gvimrc
 
 " Hide the MacVim toolbar
-set go-=T
+set guioptions-=Te
+set guioptions-=r
 " Display the tab bar if there is more than one tab
 set showtabline=1
 " Turn off the blinking cursor in normal mode

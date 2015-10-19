@@ -50,3 +50,17 @@ alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool fals
 # Hide/show all desktop icons (useful when presenting)
 alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+
+# Git shortcuts
+alias gs="git status"
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gca='git commit --amend'
+alias gcf='git commit --fixup=HEAD'
+alias gra='git rebase -i --autosquash'
+alias gd='git diff'
+alias go='git checkout '
+alias gl='git --no-pager log -10 --oneline --decorate --graph'
+alias gll='git --no-pager log --oneline --decorate --graph'

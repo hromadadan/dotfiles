@@ -39,3 +39,6 @@ load_dotfiles() {
 
 load_dotfiles
 unset load_dotfiles
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm

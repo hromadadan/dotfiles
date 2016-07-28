@@ -17,12 +17,15 @@ if has("autocmd")
     filetype indent on
     filetype plugin on
 
+    set autoindent
     " Languages with specific tabs/space requirements
     autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab
     " Automatically strip trailing whitespace on file save
     autocmd BufWritePre *.css,*.html,*.js,*.json,*.md,*.php,*.py,*.rb,*.scss,*.sh,*.txt :call StripTrailingWhitespace()
     " Don't treat json as javascript
     autocmd BufRead,BufNewFile *.json set filetype=json
+    " GotoFile auto complete JS extension
+    autocmd FileType javascript setl suffixesadd+=.js
 endif
 
 if has("syntax")
@@ -89,8 +92,10 @@ let g:ctrlp_show_hidden = 1
 " Terminal tansparency off
 let g:solarized_termtrans = 1
 
-"  eslint checker
-let g:syntastic_javascript_checkers = ['eslint']
+"  standard checker
+"let g:syntastic_javascript_checkers = ['standard']
+"autocmd bufwritepost *.js silent !standard-format -w %
+"set autoread
 
 " Change mapleader
 let mapleader=","
@@ -159,3 +164,8 @@ nnoremap Y y$
 if filereadable(glob("$HOME/.vimrc.local"))
     source $HOME/.vimrc.local
 endif
+
+" Tern
+" http://blog.sudoask.com/setup-ternjs-node-javascript-autocomplete-plugin-for-vim-editor/
+"autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"  
+"set completeopt-=preview

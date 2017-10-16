@@ -26,3 +26,7 @@ export PHANTOMJS_BIN="$(brew --prefix)/bin/phantomjs"
 # Make new shells get the history lines from all previous
 # shells instead of the default "last window closed" history
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Android developer
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/tools/bin"
+export ANDROID_HOME="$HOME/Library/Android/sdk"

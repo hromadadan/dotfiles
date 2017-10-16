@@ -169,3 +169,5 @@ endif
 " http://blog.sudoask.com/setup-ternjs-node-javascript-autocomplete-plugin-for-vim-editor/
 "autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"  
 "set completeopt-=preview
+
+let g:vim_game_code_break_item_limit = 2    " default value is 2

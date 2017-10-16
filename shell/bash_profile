@@ -42,3 +42,11 @@ unset load_dotfiles
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#if [[ -s $HOME/.rvm/scripts/rvm ]]; then
+#  source $HOME/.rvm/scripts/rvm;
+#fi
+
+export PATH="$HOME/.fastlane/bin:$PATH"
+

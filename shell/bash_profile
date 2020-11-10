@@ -32,3 +32,18 @@ load_dotfiles() {
 
 load_dotfiles
 unset load_dotfiles
+
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin
+export PULUMI_CONFIG_PASSPHRASE=@mJ.!zUK@nd!M*V*2VEmWfTt
+
+# add Node Version Manager
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Link various preferences that should be synced via iCloud
+icloud_prefs="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Synced Preferences"
+if [ -d  "$icloud_prefs" ]; then
+    for f in "$icloud_prefs/Home/Library/Preferences/"*.plist ; do
+        try_link "$f" "$HOME/Library/Preferences/$(basename "$f")"
+    done
+fi

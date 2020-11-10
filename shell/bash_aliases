@@ -14,13 +14,13 @@ alias -- -="cd -"
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Long form no user group, color
-alias l="ls -oG"
+alias l="ls -1G"
 # Order by last modified, long form no user group, color
-alias lt="ls -toG"
+#alias lt="ls -t1G"
 # List all except . and ..., color, mark file types, long form no user group, file size
-alias la="ls -AGFoh"
+alias la="ls -AGF1h"
 # List all except . and ..., color, mark file types, long form no use group, order by last modified, file size
-alias lat="ls -AGFoth"
+alias lat="ls -AGF1th"
 
 # Concatenate and print content of files (add line numbers)
 alias catn="cat -n"
@@ -54,6 +54,7 @@ alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false &
 # Git shortcuts
 alias gs="git status"
 alias gs='git status '
+alias gp='git pull'
 alias ga='git add '
 alias gb='git branch '
 alias gc='git commit'
@@ -64,3 +65,16 @@ alias gd='git diff'
 alias go='git checkout '
 alias gl='git --no-pager log -10 --oneline --decorate --graph'
 alias gll='git --no-pager log --oneline --decorate --graph'
+# Misspells git aliases
+alias got='git '
+
+# Local tunnel tools
+alias ng='~/src/ngrok '
+
+# Search for content in files
+alias gr='grep -I --exclude-dir=node_modules -rn '
+
+# React Native shortcut
+alias rn='react-native '
+
+alias ipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"

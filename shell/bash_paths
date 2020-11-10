@@ -1,10 +1,18 @@
 #!/bin/bash
 
-# bash_paths
+# homes and bash_paths
+
+
+# Android developer (see bath_paths too)
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+
+# Appium for e2e tests
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home"
 
 # Directories to be prepended to PATH
 declare -a dirs_to_prepend=(
     "/usr/local/bin" # Ensure that this bin always takes precedence over `/usr/bin`
+    "/usr/local/opt/mongodb@3.6/bin"
 )
 
 # Directories to be appended to PATH
@@ -12,6 +20,12 @@ declare -a dirs_to_append=(
     "/usr/bin"
     "$HOME/bin"
     "$(brew --prefix coreutils)/libexec/gnubin" # Add brew-installed GNU core utilities bin
+    "$HOME/Library/Android/sdk/platform-tools"
+    "$HOME/Library/Android/sdk/tools"
+    "$HOME/Library/Android/sdk/tools/bin"
+    "$JAVA_HOME/bin"
+    "$HOME/.fastlane/bin"
+    "$HOME/flutter/bin"
 )
 
 # Prepend directories to PATH
